@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="main.css">
 <title align="center">Error Bot</title>
+{% include 'css.html' %}
 <script type="text/javascript" src="js/main.js"> </script>
 <link rel="stylesheet" href="css/main.css">
 </head>
@@ -20,25 +21,43 @@
     (This is a filler paragraph to be filled in to show what we have used to make the project work this far)
 
 </p>
+<div>
+    {% include 'js.html' %}
+</div>
 </div>
 
      <form action="registerPage.html" method="GET">
             <button type="submit" formaction="registerPage.html">Register</button>
      </form>
-     
-     <form action="IO problem.html" method="GET">
-            <button type="submit" formaction="IO problem.html">IO Problems</button>
-     </form>
-     <form action="topics.html" method="GET">
-            <button type="submit" formaction="topics.html">IT and CS topics</button>
-     </form>
    <!-- <form action="stat analysis.html" method="GET"> -->
             <!-- <button type="submit" formaction="">Continue to Database</button> -->
      <!-- </form>  -->
+     {% block content %}
+     <div class="row">
+         <div class="col">
+             <table class="table table-striped table-hover">
+                 <thead class="thead-dark">
+                    <tr>
+                        <th>ID</th><th>name</th><th>email</th>
+                    </tr>
+                 </thead>
+                 <tbody>
+                     {% for a in anime %}
+                     <tr>
+                         <td>{{a.id}}</td>
+                         <td>{{a.name}}</td>
+                         <td>{{a.email}}</td>
+                     </tr>
+                     {% endfor %}
+                 </tbody>
+             </table>
+         </div>
+     </div>
+ {% endblock %}
      <footer>
             <p align="right"> <font size="1">
                 Designed by Damian Jawahir for INFO2602
                 </p>
-            </footer>
+    </footer>
 </body>
 </html>

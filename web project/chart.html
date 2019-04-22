@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{% title %}</title>
+  {% include 'css.html' %}
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+</head>
+
+<body>
+        <div>
+                {% include 'js.html' %}
+         </div>
+       
+        <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+
+    <script src="chart.js">  </script>
+</body>
+</html>
+
+
+
+
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="stylesheet" href="https://cdn.jsdeliver.net/chartist.js/latest/chartist.min.css">
+  <script src="https://cdn.jsdeliver.net/chartist.js/latest/chartist.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <title>Graph</title>
+</head>
+<body>
+  <div class="ct-chrt ct-perfect-fourth">
+    <script>
+      var getData=$.get('/data');
+
+      getData.done(function(results)
+      {
+        var data={
+          labels:['year1','year 2','year 3','year 4','year 5','year 6','year 7','year 8'],
+
+          series:[
+            results.results
+          ]
+        };
+
+        var options={
+          width:800,
+          height:600
+        }
+
+        var chart=new Chartist.Line('.ct-chart',data,options);
+
+      });
+    </script>
+  </div>
+  
+</body>
+</html>
+-->
