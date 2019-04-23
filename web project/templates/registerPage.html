@@ -6,33 +6,33 @@
 
                 <h2 align="center"style="color:beige">Register to my website</h2>
 
-                <form action="thankYou.html">
+                <form action="/registration" method="POST">
                         <fieldset>
                                         <legend>Personal information</legend>
                                 First name:<br>
-                                <input type="text" name="firstname" value="First name">
+                                <input type="text" name="firstname" placeholder="First name" required>
                                 <br>
                                 Last name:<br>
-                                <input type="text" name="lastname" value="Last Name">
+                                <input type="text" name="lastname" placeholder="Last Name" required>
                                 <br> 
                                 Address :<br>
-                                <input type="text" name="Address" value="Address">
+                                <input type="text" name="Address" placeholder="Address">
                                 <br>
                                 Email :<br>
-                                <input type="text" name="Email" value="Email">
+                                <input type="text" name="Email" placeholder="Email" required>
                                 <br>
                                 Password :<br>
-                                <input type="text" name="Password" value="Password">
+                                <input type="text" name="Password" placeholder="Password">
                                 <br>
                                 Phone Number :<br>
-                                <input type="number" name="Phone number" value="Phone Number">
+                                <input type="number" name="Phone number" placeholder="Phone Number">
                                 <br>
                                 Date of Birth:<br>
-                                <input type="date" name="dateOfBirth" value="dd/mm/yyyy">
+                                <input type="date" name="dateOfBirth" placeholder="dd/mm/yyyy">
                                 <br>
                                 <br>
                                 User Description:<br>
-                                <textarea name="message" rows="10" cols="30"> This is a default message </textarea>
+                                <textarea name="message" rows="10" cols="30" placeholder="Please enter a user description"></textarea>
                                 <br>
 
                                 <input type="submit" value="Submit">

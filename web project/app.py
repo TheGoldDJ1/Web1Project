@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, redirect
 from flask_sqlalchemy import SQLAlchemy
 import json
 # import yaml
@@ -151,6 +151,10 @@ def save_errorsolutions():
         response.status_code = 400
         return response
 
+@app.route("/home-page", methods=["Get"])
+def show_home():
+    return render_template("homePage.html")
+
 @app.route("/registration", methods=['GET', 'POST'])
 def registration():
 
@@ -159,7 +163,7 @@ def registration():
             person = Registration(firstname=request.form.get("firstname"),lastname = request.form.get("lastname"), address = request.form.get("Address"), email = request.form.get("Email"),  password = request.form.get("Password"), phonenumber = request.form.get("Phone Number"), dateofbirth = request.form.get("dateofBirth"), description = request.form.get("message"))
             db.session.add(person)
             db.session.commit()
-            return redirect("homePage.html", person=person)
+            return redirect("home-page")
         except Exception as e:
             print("Failed to add person")
             print(e)

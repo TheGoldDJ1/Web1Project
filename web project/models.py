@@ -67,7 +67,7 @@ class Registration(db.Model):
     firstname = Column(String(30))
     lastname = Column(String(30))
     address = Column(String(50))
-    email = Column(String(30))
+    email = Column(String(30), unique=True)
     password = Column(String(30))
     phonenumber = Column(Integer)
     dateofbirth = Column(DateTime())
