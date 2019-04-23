@@ -1,11 +1,13 @@
+
+
 body {
     
-     background-image: url("background.jpg"); 
-      background-position: center;  
-    background-attachment: fixed; 
-    background-repeat: no-repeat;
-    background-attachment: unset; 
-    background-size: cover;
+  background-image: url("../background.jpg"); 
+  background-position: center;  
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+  background-attachment: unset; 
+  background-size: cover;
 
   }
   

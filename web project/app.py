@@ -159,6 +159,14 @@ def show_home():
 def show_charts():
     return render_template("chart.html")
 
+@app.route("/topics-page", methods=["GET"])
+def show_topics():
+    return render_template("topics.html")
+
+@app.route("/IO-page", methods=["GET"])
+def show_IO():
+    return render_template("IO-problem.html")
+
 @app.route("/registration", methods=['GET', 'POST'])
 def registration():
 
