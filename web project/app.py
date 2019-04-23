@@ -167,6 +167,10 @@ def show_topics():
 def show_IO():
     return render_template("IO-problem.html")
 
+@app.route("/thankyou-page", methods=["GET"])
+def show_thanks():
+    return render_template("thankYou.html")
+
 @app.route("/registration", methods=['GET', 'POST'])
 def registration():
 

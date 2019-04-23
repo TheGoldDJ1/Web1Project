@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Thank you!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
     <h1 style="color:beige" align="center"><font size="12">Thank you for registering!!!</font></h1>
 
 </head>
 <body>
-        <form action="Webpage web prog.html" method="GET">
-                <button type="submit" formaction="Webpage web prog.html">Return  home</button>
+        <form action="/home-page" method="GET">
+                <button type="submit" >Return  home</button>
          </form>
 </body>
 </html>
