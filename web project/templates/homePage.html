@@ -25,38 +25,58 @@
     {% include 'js.html' %}
 </div>
 </div>
+{% block content %}
+<div class="row">
+    <div class="col">
+        <table class="table table-striped table-hover">
+            <thead class="thead-dark">
+               <tr>
+                   <th>ID</th><th>name</th><th>email</th>
+               </tr>
+            </thead>
+            <tbody>
+                {% for a in Disc %}
+                <tr>
+                    <td>{{a.id}}</td>
+                    <td>{{a.name}}</td>
+                    <td>{{a.email}}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+{% endblock %}
+<style>
+    .button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    
+    .button2 {background-color: #008CBA;} /* Blue */
+    .button3 {background-color: #f44336;} /* Red */ 
+    .button4 {background-color: #2afc0f; color: black;} /* Yellow */ 
+    </style>
+
    <form action="registerPage.html" method="GET">
-            <button type="submit" formaction="registerPage.html">Register</button>
+            <button type="submit" class="button" formaction="registerPage.html">Register</button>
      </form>
      
-     <form action="IO problem.html" method="GET">
-            <button type="submit" formaction="IO problem.html">IO Problems</button>
+     <form action="IO problem.html"  method="GET">
+            <button type="submit" class="button button2 " formaction="IO problem.html">IO Problems</button>
      </form>
      <form action="topics.html" method="GET">
-            <button type="submit" formaction="topics.html">IT and CS topics</button>
+            <button type="submit"class="button button3" formaction="topics.html">IT and CS topics</button>
      </form>
-     {% block content %}
-     <div class="row">
-         <div class="col">
-             <table class="table table-striped table-hover">
-                 <thead class="thead-dark">
-                    <tr>
-                        <th>ID</th><th>name</th><th>email</th>
-                    </tr>
-                 </thead>
-                 <tbody>
-                     {% for a in anime %}
-                     <tr>
-                         <td>{{a.id}}</td>
-                         <td>{{a.name}}</td>
-                         <td>{{a.email}}</td>
-                     </tr>
-                     {% endfor %}
-                 </tbody>
-             </table>
-         </div>
-     </div>
- {% endblock %}
+   
      <footer>
             <p align="right"> <font size="1">
                 Designed by Damian Jawahir and Matthew Cyrus for INFO2602
