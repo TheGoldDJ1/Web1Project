@@ -7,11 +7,11 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
 <title align="center">Error Bot</title>
 {% include 'css.html' %}
 <!-- <script type="text/javascript" src="js/main.js"> </script> -->
-<link rel="stylesheet" href="../css/main.css">
+
 </head>
     <body>
         <!-- Menu -->
@@ -32,12 +32,12 @@
             </div>
         </nav> 
         <header>
-            <h1 align="center"style="color:black">Home Page</h1>
+            <h1 align="center"style="color:white">Home Page</h1>
         </header>
             <div class= "content" id='article1'>
-                <p align="center"style="color:black"><font size="5">  This is the home page for our Discord bot project. The bot takes in error codes and user's names and logs them for statistical and data analysis.
+                <p align="center"style="color:white"><font size="5">  This is the home page for our Discord bot project. The bot takes in error codes and user's names and logs them for statistical and data analysis.
                 </p>
-                <pstyle="color:black">
+                <p style="color:white">
                 (This is a filler paragraph to be filled in to show what we have used to make the project work this far)
 
                 </p>
@@ -86,15 +86,15 @@
             .button4 {background-color: #2afc0f; color: black;} /* Yellow */ 
         </style>
 
-        <form action="registerPage.html" method="GET">
-                    <button type="submit" class="button" formaction="registerPage.html">Register</button>
+        <form action="/registration" method="GET">
+                    <button type="submit" class="button">Register</button>
             </form>
             
-            <form action="IO problem.html"  method="GET">
-                    <button type="submit" class="button button2 " formaction="IO problem.html">IO Problems</button>
+            <form action="/IO-page"  method="GET">
+                    <button type="submit" class="button button2 ">IO Problems</button>
             </form>
-            <form action="topics.html" method="GET">
-                    <button type="submit"class="button button3" formaction="topics.html">IT and CS topics</button>
+            <form action="/topics-page" method="GET">
+                    <button type="submit"class="button button3" >IT and CS topics</button>
             </form>
         
             <footer>

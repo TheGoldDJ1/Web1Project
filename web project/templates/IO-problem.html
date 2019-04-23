@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name= "viewport" content="width=device-width", initial-scale=1.0 >
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
 <title align="center">Error Bot</title>
-<script type="text/javascript" src="js/main.js"> </script>
-<link rel="stylesheet" href="../css/main.css">
+<!-- <script type="text/javascript" src="js/main.js"> </script> -->
 </head>
 <body>
 
@@ -34,15 +32,15 @@
     </nav> 
 
     <header>
-        <h1 align="center"style="color:black">IO problem</h1>
+        <h1 align="center"style="color:white">IO problem</h1>
     </header>
     
-   <p align="center"style="color:black"><font size="2"> 
+   <p align="center"style="color:white"><font size="2"> 
         In our project we found that many gaming companies and like companies tend to have issues with customers having errors or issues with the programs made. These customers tend to go to places such as Twitter, Facebook and more recently, community centered Discord servers. These customers then put the errors they get and ask for solutions from developers. However, developers cannot reach out to each player individually due to the large scale of problems they encounter every day. Our solution then, is to create a system which developers can use to automatically record the errors customers encounter by taking the information from an “error” channel in a Discord server, and then logging the data in a database. A developer, then, can decide to try to solve the problem if it is a problem with the developers or they can send automated messages to users. These are just basic ideas of the system, however is can be expanded to include more inputs such as from Twitter and Facebook and can also be used for statistical analysis such as to find issues with servers. 
 
         
    </font> </p>
-   <p align="center"style="color:black"><font size="2">
+   <p align="center"style="color:white"><font size="2">
         The innovative idea of the project, is that we believe that by allowing a streamlined system which allow developers to view errors, problems and common issues with customers that the efficiency of the company can be effectively maximized as a whole and give users an efficient and pleasing way to access customer services. From this we can see that the project works as described and visualized and can give users the experience we wish to allow everyone to have. However, in the future there are features we would like to add such as allowing Twitter to be accepted into the system as well as provide an automated reply system which gives users solutions based on administrator replies to users who would have had similar errors that way users can gain solutions to problems before human interaction is even required. 
 
     </font> </p>
@@ -70,11 +68,11 @@
     
     </style>
 
-     <form action="homePage.html" method="GET">
-            <button type="submit" class="button" formaction="homePage.html">Home</button>
+     <form action="/home-page" method="GET">
+            <button type="submit" class="button">Home</button>
      </form>
-     <form action="topics.html" method="GET">
-            <button type="submit" class="button button2" formaction="topics.html">Topics</button>
+     <form action="/topics-page" method="GET">
+            <button type="submit" class="button button2">Topics</button>
      </form>
 
      <footer>
