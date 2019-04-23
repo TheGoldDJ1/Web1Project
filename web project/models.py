@@ -53,8 +53,8 @@ class ErrorTable(db.Model):
         if errorcode:
             self.errorcode = errorcode
 
-    def __repr__(self):
-        return f"User('{self.username}', '{self.password}')"
+    # def __repr__(self):
+    #     return f"User('{self.username}', '{self.password}')"
 
     def toDict(self):
        return {

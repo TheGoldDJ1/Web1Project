@@ -33,7 +33,7 @@ from models import CodeName, ErrorSolution, ErrorTable
 
 @app.route("/")
 def hello():
-    return "Hello World!"
+    return render_template('registerPage.html')
 
 # ErrorTable table
 @app.route('/errortable', methods=['GET'])
