@@ -33,7 +33,7 @@ from models import CodeName, ErrorSolution, ErrorTable, Registration
 
 @app.route("/")
 def hello():
-    return render_template('registerPage.html')
+    return render_template('homePage.html')
 
 # ErrorTable table
 @app.route('/errortable', methods=['GET'])
@@ -151,9 +151,13 @@ def save_errorsolutions():
         response.status_code = 400
         return response
 
-@app.route("/home-page", methods=["Get"])
+@app.route("/home-page", methods=["GET"])
 def show_home():
     return render_template("homePage.html")
+
+@app.route("/chart-page", methods=["GET"])
+def show_charts():
+    return render_template("chart.html")
 
 @app.route("/registration", methods=['GET', 'POST'])
 def registration():

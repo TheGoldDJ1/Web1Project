@@ -2,19 +2,38 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>{% title %}</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <title>Charts</title>
   {% include 'css.html' %}
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
 </head>
 
 <body>
+
+  <!-- Menu -->
+  <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+          <div class="navbar-header">
+              <a class="navbar-brand" href="/home-page">Home</a>
+          </div>
+          <div class="navbar-header">
+              <a class="navbar-brand" href="/chart-page">Chart</a>
+          </div>
+          <div class="navbar-header">
+              <a class="navbar-brand" href="#">Profile</a>
+          </div>
+      </div>
+  </nav> 
         <div>
                 {% include 'js.html' %}
          </div>
        
         <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
 
-    <script src="chart.js">  </script>
+    <script src="../chart.js">  </script>
 </body>
 </html>
 
