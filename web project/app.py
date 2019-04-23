@@ -28,7 +28,7 @@ def setup():
 def shutdown_session(exception=None):
     db.session.remove()
 
-from models import CodeName, ErrorSolution, ErrorTable
+from models import CodeName, ErrorSolution, ErrorTable, Registration
 
 
 @app.route("/")
@@ -150,3 +150,19 @@ def save_errorsolutions():
         response = jsonify({'message': 'Invalid format of data in the request'})
         response.status_code = 400
         return response
+
+@app.route("/registration", methods=['GET', 'POST'])
+def registration():
+
+    if request.form:
+        try:
+            person = Registration(firstname=request.form.get("firstname"),lastname = request.form.get("lastname"), address = request.form.get("Address"), email = request.form.get("Email"),  password = request.form.get("Password"), phonenumber = request.form.get("Phone Number"), dateofbirth = request.form.get("dateofBirth"), description = request.form.get("message"))
+            db.session.add(person)
+            db.session.commit()
+            return redirect("homePage.html", person=person)
+        except Exception as e:
+            print("Failed to add person")
+            print(e)
+
+
+    return render_template('registerPage.html')

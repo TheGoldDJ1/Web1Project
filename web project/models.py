@@ -46,15 +46,12 @@ class ErrorTable(db.Model):
     username = Column(String(30), nullable=False)
     errorcode = Column(Integer, ForeignKey('codename.errorcode'))
     date = Column(DateTime(), server_default=func.now())
-    # posts = db.relationship('Post', backref='author', lazy=True)
 
     def __init__(self, username, errorcode=None):
         self.username = username
         if errorcode:
             self.errorcode = errorcode
 
-    # def __repr__(self):
-    #     return f"User('{self.username}', '{self.password}')"
 
     def toDict(self):
        return {
@@ -63,3 +60,32 @@ class ErrorTable(db.Model):
             'errorcode': self.errorcode,
             'date': self.date
         }
+
+class Registration(db.Model):
+    __tablename__ = "registration"
+    id = Column(Integer, primary_key=True, autoincrement="auto")
+    firstname = Column(String(30))
+    lastname = Column(String(30))
+    address = Column(String(50))
+    email = Column(String(30))
+    password = Column(String(30))
+    phonenumber = Column(Integer)
+    dateofbirth = Column(DateTime())
+    description = Column(String(100))
+
+    def __init__(self, firstname, lastname=None, address=None, email=None, password=None, phonenumber=None, dateofbirth=None, description=None):
+        self.firstname = firstname
+        if lastname:
+            self.lastname = lastname
+        if address:
+            self.address = address
+        if email:
+            self.email = email
+        if password:
+            self.password = password
+        if phonenumber:
+            self.phonenumber = phonenumber
+        if dateofbirth:
+            self.dateofbirth = dateofbirth
+        if description:
+            self.description = description
