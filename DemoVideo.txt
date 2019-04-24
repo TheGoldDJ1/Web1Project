@@ -1,0 +1,7 @@
+https://drive.google.com/open?id=1VkzYNzMLTp1-ybM0tBQlpmiX37H7fdDN <- Demo videos of functionality 
+
+NOTE:
+
+Because of limitations data is only set to sync between services every 15 mins so there will be a delay in the operations demonstrated. 
+
+Discord client is not needed for tested as discord can be accessed via web browsers. 
